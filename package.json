@@ -8,7 +8,6 @@
   "dependencies": {
     "ascii-table": "^0.0.9",
     "axios": "^0.21.1",
-    "shelljs": "^0.8.4",
-    "test-runner": "github:uadyfmat/test-runner"
+    "shelljs": "^0.8.4"
   }
 }
