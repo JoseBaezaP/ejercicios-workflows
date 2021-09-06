@@ -36,7 +36,5 @@ jobs:
       - run: npm ci
       - run: npm i -g uadyfmat/test-runner
       - run: npm run build --if-present
-      - run: |
-            z=$(grep -s -L this E-*)
-            for i in ${z}; do test-runner ${i}; done 
+      - run: bash run.sh
 
