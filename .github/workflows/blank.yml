@@ -33,8 +33,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test
-      - run: grep -s -L this Ejercicio-*
+      - run: npm i -g uadyfmat/test-runner
+      - run: z=$(grep -s -L this Ejercicio-*)
+      - run: for i in ${z}; do test-runner ${i}; done
 
