@@ -4,6 +4,8 @@ z=$(grep -s -L this E-*)
 directories=0
 exercises=0
 
+rm result
+
 for i in ${z}; 
 do
   directories=$((directories + 1))
@@ -18,3 +20,10 @@ done;
 echo Se resolvieron $exercises ejercicios correctamente de $directories
 
 cat result
+
+if [ $exercises -eq $directories ]
+then
+  exit 0
+else
+  exit 1
+fi

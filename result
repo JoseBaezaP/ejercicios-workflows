@@ -1,0 +1,17 @@
+Errors:
+- Solution file of a supported language is not present in target directory.
+  Target directory: /mnt/d/jose/Trabajos personales/servicio/final/ejercicios-workflows/E-EntreLimites
+  Supported laguages: java,py,c,cpp
+
+Errors:
+- spec.inout is not present in target directory.
+  Target directory: /mnt/d/jose/Trabajos personales/servicio/final/ejercicios-workflows/E-Palindromo
+- Solution file of a supported language is not present in target directory.
+  Target directory: /mnt/d/jose/Trabajos personales/servicio/final/ejercicios-workflows/E-Palindromo
+  Supported laguages: java,py,c,cpp
+
+Errors:
+- Solution file of a supported language is not present in target directory.
+  Target directory: /mnt/d/jose/Trabajos personales/servicio/final/ejercicios-workflows/E-ParEimpar
+  Supported laguages: java,py,c,cpp
+
