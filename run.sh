@@ -4,8 +4,6 @@ z=$(grep -s -L this E-*)
 directories=0
 exercises=0
 
-rm result
-
 for i in ${z}; 
 do
   directories=$((directories + 1))
@@ -14,6 +12,9 @@ do
   if [ $? -eq 0 ]
   then
     exercises=$((exercises + 1))
+    printf '%s\t%s\n' ${i} Correcto >> exercises-list
+  else
+    printf '%s\t%s\n' ${i} Error >> exercises-list
   fi
 done;
 
@@ -22,7 +23,12 @@ echo '#########'
 echo Resumen: $exercises/$directories
 echo '#########'
 
+echo ' '
+echo '#########'
+echo Exercises list
+echo '#########'
 
+cat exercises-list
 cat result
 
 if [ $exercises -eq $directories ]
