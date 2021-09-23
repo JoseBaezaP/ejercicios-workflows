@@ -1,19 +1,9 @@
 {
   "name": "ejercicios-workflows",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uadyfmat/ejercicios-workflows.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/uadyfmat/ejercicios-workflows/issues"
-  },
-  "homepage": "https://github.com/uadyfmat/ejercicios-workflows#readme"
+  "dependencies": {}
 }

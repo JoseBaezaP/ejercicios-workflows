@@ -17,7 +17,11 @@ do
   fi
 done;
 
-echo Se resolvieron $exercises ejercicios correctamente de $directories
+
+echo '#########'
+echo Resumen: $exercises/$directories
+echo '#########'
+
 
 cat result
 
