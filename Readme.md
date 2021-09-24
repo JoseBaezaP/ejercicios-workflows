@@ -89,4 +89,53 @@ Finalmente esta en el archivo `Readme.md` en donde el maestro podrá hablar un p
 
 ---
 
-Para ir concluyendo hablaremos de los últimos archivos que constituyen este template de ejercicios,
+Para ir concluyendo hablaremos de los últimos archivos que constituyen este template de ejercicios.
+
+Primero hablaremos de los archivos `package.json` y `package-lock.json` estos archivos son de estilo dummy
+para que el workflow pueda llevar a cabo la instalación de la paqueteria de node.
+
+Por último tenemos el archivo `run.sh`
+
+```txt
+#!/bin/bash
+z=$(grep -s -L this E-*)
+
+directories=0
+exercises=0
+
+for i in ${z};
+do
+  directories=$((directories + 1))
+  test-runner -e ${i} >> result
+
+  if [ $? -eq 0 ]
+  then
+    exercises=$((exercises + 1))
+    printf '%s\t%s\n' ${i} Correcto >> exercises-list
+  else
+    printf '%s\t%s\n' ${i} Error >> exercises-list
+  fi
+done;
+
+
+echo '#########'
+echo Resumen: $exercises/$directories
+echo '#########'
+
+echo ' '
+echo '#########'
+echo Exercises list
+echo '#########'
+
+cat exercises-list
+cat result
+
+if [ $exercises -eq $directories ]
+then
+  exit 0
+else
+  exit 1
+fi
+```
+
+El cual es el encargado de ir guardando los resultados de los ejercicios e unos archivos temporales en el entorno de linux que montamos para asi verificar las salidas de los programas.
